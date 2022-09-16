@@ -11,8 +11,8 @@ import { BASE_NAME, IS_DEVELOPMENT } from './config';
 
 const router = createBrowserRouter(
     createRoutesFromElements([
-        <Route path={`${IS_DEVELOPMENT ? "" : BASE_NAME}/`} element={< App />} />,
-        < Route path={`${IS_DEVELOPMENT ? "" : BASE_NAME}/:src`} element={< App />} />
+        <Route path="/" element={< App />} />,
+        < Route path="/:src" element={< App />} />
     ]),
 );
 

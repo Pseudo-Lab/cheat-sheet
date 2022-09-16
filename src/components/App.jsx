@@ -8,7 +8,6 @@ import { Cards } from './Cards';
 import React from "react";
 import { ThemeProvider, createTheme, Theme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { useParams } from "react-router-dom";
 
 
 const darkTheme = createTheme({
@@ -21,14 +20,12 @@ const normalTheme = createTheme({
 });
 
 function App() {
-  const { src } = useParams()
 
   return (
 
     <ThemeProvider
       theme={normalTheme}
     >
-      {src}
       <CssBaseline />
       <Cards />
     </ThemeProvider>
