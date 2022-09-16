@@ -17,7 +17,9 @@ function Cards() {
     useEffect(() => {
         (async () => {
             const ipy_objs = await ipynbParser.parse(
-                `assets/${src || "matplotlib"}.ipynb`
+                IS_DEVELOPMENT ?
+                    `assets/${src || "matplotlib"}.ipynb` :
+                    `${BASE_URL}${BASE_NAME}assets/${src || "matplotlib"}.ipynb`
             );
             setIpynbBlocks(ipy_objs);
             console.log(src);
