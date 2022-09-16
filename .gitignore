@@ -10,8 +10,8 @@
 
 # production
 /dist
-# /docs/*        
-# !/docs/assets 
+/docs/*        
+!/docs/assets 
 
 
 # misc

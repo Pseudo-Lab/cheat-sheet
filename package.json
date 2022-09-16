@@ -9,7 +9,6 @@
   "scripts": {
     "start": "parcel --dist-dir docs",
     "build": "parcel build --dist-dir docs --public-url https://pseudo-lab.github.io/cheat-sheet"
-
   },
   "repository": {
     "type": "git",
@@ -25,6 +24,7 @@
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
     "express": "^4.18.1",
+    "gh-pages": "^4.0.0",
     "parcel": "^2.7.0",
     "process": "^0.11.10",
     "punycode": "^2.1.1"
