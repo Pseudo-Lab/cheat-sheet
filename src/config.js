@@ -1,4 +1,4 @@
-const IS_DEVELOPMENT = true; // 개발중에서는 true로 설정해주시고,
+const IS_DEVELOPMENT = false; // 개발중에서는 true로 설정해주시고,
 // 배포되는 환경에서는 반드시 false로 꼭 수정해주셔야 합니다.
 // 이게 최선인지는 잘 모르겠는데 일단은 이렇게 했습니다.
 
