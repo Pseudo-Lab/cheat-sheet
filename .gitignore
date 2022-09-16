@@ -11,8 +11,8 @@
 # production
 /build
 /dist
-/docs/*
-!/docs/assets 
+# /docs/*        배포 환경에서는 제외시키지 않습니다.
+# !/docs/assets 
 
 
 # misc
