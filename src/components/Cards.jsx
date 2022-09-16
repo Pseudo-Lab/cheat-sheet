@@ -2,27 +2,29 @@
   * Responsive Masonry : https://www.npmjs.com/package/react-responsive-masonry
   * 
 */
-import { BASE_URL, columnsCountBreakPoints, BASE_NAME, IS_DEVELOPMENT } from '../config.json';
+import { BASE_URL, columnsCountBreakPoints, BASE_NAME } from '../config.json';
 import { useEffect, useState } from 'react';
 import { IpynbParser } from './utils';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import MuiCard from './MuiCard';
-import { useParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 function Cards() {
-    const { src } = useParams()
     const [ipynbBlocks, setIpynbBlocks] = useState([]);
     const ipynbParser = new IpynbParser();
 
+    const [searchParams] = useSearchParams()
+    const src = searchParams.get("src")
+
     useEffect(() => {
         (async () => {
-            const ipy_objs = await ipynbParser.parse(
-                IS_DEVELOPMENT ?
-                    `assets/${src || "matplotlib"}.ipynb` :
-                    `${BASE_URL}${BASE_NAME}/assets/${src || "matplotlib"}.ipynb`
-            );
+            const baseUrl = (window.location.href
+                .startsWith(BASE_URL) ?
+                BASE_NAME : "");
+
+            const ipy_objs = await ipynbParser
+                .parse(`${baseUrl}/assets/${src || "matplotlib"}.ipynb`);
             setIpynbBlocks(ipy_objs);
-            console.log(src);
         })();
     }, [])
 

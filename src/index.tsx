@@ -1,27 +1,27 @@
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import React from 'react';
 import { App } from './components/App';
 import {
-    createBrowserRouter,
-    createRoutesFromElements,
-    RouterProvider,
-    Route
+    Route,
+    Routes,
+    BrowserRouter
 } from "react-router-dom";
 import config from './config.json';
 
-const router = createBrowserRouter(
-    createRoutesFromElements([
-        <Route
-
-            path={config.IS_DEVELOPMENT ? "/" : config.BASE_NAME}
-            element={< App />} />,
-        < Route
-            path={config.IS_DEVELOPMENT ? "/:src" : config.BASE_NAME + "/:src"}
-            element={< App />} />
-    ]),
-);
 
 
-const app = document.getElementById("app")
+const app: HTMLElement = document.getElementById("app") as HTMLElement
 
-ReactDOM.render(<RouterProvider router={router} />, app)
+console.log(config)
+const root = createRoot(app);
+
+root.render(
+    <BrowserRouter>
+        <Routes>
+            <Route
+
+                path={config.BASE_NAME}
+                element={< App />} />
+        </Routes>
+
+    </BrowserRouter>)
