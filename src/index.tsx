@@ -12,7 +12,6 @@ import config from './config.json';
 
 const app: HTMLElement = document.getElementById("app") as HTMLElement
 
-console.log(config)
 const root = createRoot(app);
 
 root.render(
