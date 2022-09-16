@@ -3,7 +3,7 @@ const IS_DEVELOPMENT = true; // 개발중에서는 true로 설정해주시고,
 // 이게 최선인지는 잘 모르겠는데 일단은 이렇게 했습니다.
 
 const BASE_URL = "https://pseudo-lab.github.io";
-const BASE_NAME = "/matplotlib-cheat-sheet";
+const BASE_NAME = "/cheat-sheet";
 const columnsCountBreakPoints = {
     "340": 1,
     "680": 2,
