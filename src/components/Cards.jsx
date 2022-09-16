@@ -2,7 +2,7 @@
   * Responsive Masonry : https://www.npmjs.com/package/react-responsive-masonry
   * 
 */
-import { BASE_URL, columnsCountBreakPoints, BASE_NAME, IS_DEVELOPMENT } from '../config';
+import { BASE_URL, columnsCountBreakPoints, BASE_NAME, IS_DEVELOPMENT } from '../config.json';
 import { useEffect, useState } from 'react';
 import { IpynbParser } from './utils';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"

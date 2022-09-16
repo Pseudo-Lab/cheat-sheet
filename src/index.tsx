@@ -7,17 +7,16 @@ import {
     RouterProvider,
     Route
 } from "react-router-dom";
-import { BASE_NAME, IS_DEVELOPMENT } from './config';
-
-
+import config from './config.json';
 
 const router = createBrowserRouter(
     createRoutesFromElements([
         <Route
-            path={IS_DEVELOPMENT ? "/" : BASE_NAME}
+
+            path={config.IS_DEVELOPMENT ? "/" : config.BASE_NAME}
             element={< App />} />,
         < Route
-            path={IS_DEVELOPMENT ? "/:src" : BASE_NAME + "/:src"}
+            path={config.IS_DEVELOPMENT ? "/:src" : config.BASE_NAME + "/:src"}
             element={< App />} />
     ]),
 );
