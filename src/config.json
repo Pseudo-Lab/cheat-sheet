@@ -1,5 +1,5 @@
 {
-    "IS_DEVELOPMENT": false,
+    "IS_DEVELOPMENT": true,
     "BASE_URL": "https://pseudo-lab.github.io",
     "BASE_NAME": "/cheat-sheet",
     "columnsCountBreakPoints": {
