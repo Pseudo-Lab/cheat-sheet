@@ -19,7 +19,7 @@ function Cards() {
             const ipy_objs = await ipynbParser.parse(
                 IS_DEVELOPMENT ?
                     `assets/${src || "matplotlib"}.ipynb` :
-                    `${BASE_URL}${BASE_NAME}assets/${src || "matplotlib"}.ipynb`
+                    `${BASE_URL}${BASE_NAME}/assets/${src || "matplotlib"}.ipynb`
             );
             setIpynbBlocks(ipy_objs);
             console.log(src);
