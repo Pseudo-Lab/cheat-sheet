@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
+from build import build
 
-
+build()
 app = FastAPI()
 app.mount("/", StaticFiles(directory="docs", html=True), name="static")
 

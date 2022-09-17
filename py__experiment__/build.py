@@ -1,10 +1,10 @@
 from pathlib import Path
 from argparse import ArgumentParser
-
+import json
 from utils import create_index_html, create_index_js
 
 
-def build(url, base_url):
+def build(url="", base_url=""):
     """
     params:
     - `base_url: str`          e.g. "https://pseudo-lab.github.io"
@@ -19,11 +19,11 @@ def build(url, base_url):
         f.write(create_index_js(url, base_url))
 
 
-
 if __name__ == "__main__":
-    parser = ArgumentParser()
-    parser.add_argument("--url", "-U", type=str, default="")
-    parser.add_argument("--base_url", "-BU", type=str, default="")
-    args = parser.parse_args()
+    __dirname = Path(__file__).parent
 
-    build(url=args.url, base_url=args.base_url)
+    with open(__dirname.joinpath("config.json"), "r", encoding="utf-8") as f:
+        config = json.load(f)
+    print(config)
+
+    build(url=config["url"], base_url=config["base_url"])

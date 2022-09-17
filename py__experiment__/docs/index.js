@@ -26549,7 +26549,7 @@ var l;
   }
 }(), s = (l = i("Xw6Mv")).createRoot, l.hydrateRoot, i("acw62");
 var c;
-c = JSON.parse('{"URL":"","BASE_URL":"","columnsCountBreakPoints":{"340":1,"680":2,"1020":3,"1360":4,"1700":5},"maxWidth":320}');
+c = JSON.parse('{"URL":"https://pseudo-lab.github.io","BASE_URL":"/cheat-sheet","columnsCountBreakPoints":{"340":1,"680":2,"1020":3,"1360":4,"1700":5},"maxWidth":320}');
 var u = i("acw62"),
   d = {},
   _ = {},
