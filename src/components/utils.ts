@@ -117,7 +117,8 @@ class IpynbParser {
 
 
     /**
-     * @param {Cell} cell cell.cell_type must equals to "code". 
+     * 코드셀에 관한 처리를 담당하는 함수입니다.
+     * @param {Cell} cell 인자로 전달되는 Cell은 반드시 cell_type 프로퍼티가 "code"여야 합니다. 
      */
     private codeCell(cell: Cell) {
         // Code Cell
