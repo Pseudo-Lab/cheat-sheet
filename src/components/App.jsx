@@ -9,7 +9,6 @@ import React from "react";
 import { ThemeProvider, createTheme, Theme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
