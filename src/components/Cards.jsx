@@ -18,10 +18,10 @@ function Cards() {
 
     useEffect(() => {
         (async () => {
-            const baseUrl = (window.location.href
-                .startsWith(BASE_URL) ?
-                BASE_NAME : "");
 
+            let baseUrl = window.location.href.match("http.+(?=/{0,1}\\?)")
+            baseUrl = baseUrl ? baseUrl[0] : window.location.href
+            // console.log(baseUrl)
             const ipy_objs = await ipynbParser
                 .parse(`${baseUrl}/assets/${src || "matplotlib"}.ipynb`);
             setIpynbBlocks(ipy_objs);
