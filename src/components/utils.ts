@@ -135,6 +135,11 @@ class IpynbParser {
             if (("data" in output) && ("text/html" in output.data)) {
                 this.tempIpynbBlock.htmlOutput.push(...output.data["text/html"]);
             }
+            if (("data" in output) && ("text/markdown" in output.data)) {
+                this.tempIpynbBlock.htmlOutput.push(
+
+                    this.mdparser.render(output.data["text/markdown"].join("")))
+            }
             if ("text" in output) {
                 this.tempIpynbBlock.output.push(...output.text);
             }

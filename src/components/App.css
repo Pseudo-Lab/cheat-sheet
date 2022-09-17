@@ -58,13 +58,13 @@ div#root {
 }
 
 
-table.dataframe {
+table {
     border-collapse: collapse;
     font-family: 'D2Coding';
     font-weight: normal;
 
     border: none;
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
 }
 
@@ -73,7 +73,15 @@ tr>* {
     border-bottom: grey 1px solid;
 }
 
-table.dataframe>thead>tr>* {
+table>thead>tr>* {
     text-align: center;
     background-color: rgb(245, 245, 245);
+}
+th{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+td:first-child{
+    /* border-right: 1px solid grey; */
+    text-align:  center !important;
 }
