@@ -14,8 +14,8 @@ const app: HTMLElement = document.getElementById("app") as HTMLElement
 
 const root = createRoot(app);
 const baseUrl = (window.location.href
-    .startsWith(config.BASE_URL) ?
-    config.BASE_NAME : "/");
+    .startsWith(config.URL) ?
+    config.BASE_URL : "/");
 
 
 root.render(
