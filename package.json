@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "parcel --dist-dir docs",
-    "build": "parcel build --dist-dir docs --public-url https://pseudo-lab.github.io/cheat-sheet",
+    "start": "rm docs/*; parcel --dist-dir docs",
+    "build": "rm docs/*; parcel build --dist-dir docs --public-url https://pseudo-lab.github.io/cheat-sheet",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d docs"
   },
