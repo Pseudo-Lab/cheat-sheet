@@ -21,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/pseudo-lab/cheat-sheet/issues"
   },
-  "homepage": "https://pseudo-lab.github.io/cheat-sheet",
   "devDependencies": {
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
