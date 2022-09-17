@@ -1,5 +1,3 @@
-from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 from argparse import ArgumentParser
 
@@ -27,7 +25,7 @@ def _predeploy(base_url, base_name):
         f.write(index_js)
 
 
-def main():
+def deploy():
     parser = ArgumentParser()
     parser.add_argument("--deploy", type=bool, default=False)
     parser.add_argument("--base_url", type=str, default="")
@@ -37,11 +35,6 @@ def main():
     if args.deploy:
         _predeploy(base_url=args.base_url, base_name=args.base_name)
 
-    app = FastAPI()
-    app.mount("/", StaticFiles(directory="docs", html=True), name="static")
 
-
-# uvicorn main:app --reload
-#
-# 만약 node 및 npm 환경이 구축되어 있지 않다면
-# 간단하게 python기반의 fastapi로 구동해볼 수도 있습니다.
+if __name__ == "__main__":
+    deploy()
