@@ -19,7 +19,8 @@ root.render(
         <Routes>
             <Route
 
-                path={config.BASE_NAME}
+                path="/" // 파이썬용으로 빌드할떄는 
+                // config.BASE_NAME 대신 그냥 "/" 기본 디렉토리로 합니다.
                 element={< App />} />
         </Routes>
 
