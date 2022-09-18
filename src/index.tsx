@@ -13,13 +13,18 @@ import config from './config.json';
 const app: HTMLElement = document.getElementById("app") as HTMLElement
 
 const root = createRoot(app);
+const baseUrl = (window.location.href
+    .startsWith(config.URL) ?
+    config.BASE_URL : "/");
+
 
 root.render(
     <BrowserRouter>
         <Routes>
             <Route
 
-                path={config.BASE_NAME}
+                path={baseUrl} // 개발서버는 /
+                // 깃허브 페이지에서는 /cheat-sheet (레포제목 or BASE_NAME)
                 element={< App />} />
         </Routes>
 

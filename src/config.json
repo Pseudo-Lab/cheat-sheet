@@ -1,6 +1,6 @@
 {
-    "BASE_URL": "https://pseudo-lab.github.io",
-    "BASE_NAME": "/cheat-sheet",
+    "URL": "https://pseudo-lab.github.io",
+    "BASE_URL": "/cheat-sheet",
     "columnsCountBreakPoints": {
         "340": 1,
         "680": 2,

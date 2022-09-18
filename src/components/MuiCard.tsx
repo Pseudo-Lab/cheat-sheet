@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import { useState } from 'react';
 import { IpynbBlock } from './utils';
-import { maxWidth } from "../config";
+import { maxWidth } from "../config.json";
 import MuiHeader from './MuiHeader';
 import Images from './Images';
 import HTMLOutput from './HTMLOutput';

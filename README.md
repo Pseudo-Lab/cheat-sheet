@@ -3,7 +3,7 @@
 * ["한장으로 살펴보는 pandas"](https://pseudo-lab.github.io/cheat-sheet/?src=pandas)
 * ["한장으로 살펴보는 matplotlib"](https://pseudo-lab.github.io/cheat-sheet/?src=matplotlib)
 
-## 1. `public/src.ipynb` 파일 수정하기
+## 1. `docs/src.ipynb` 파일 수정하기
 
 * 치트시트는 철저히 `docs/assets/*.ipynb`에 기반하여 빌드됩니다.
 * 아주 "엄격하게!" 규칙들을 지켜야지만 에러 없이 잘 빌드된다는 점 기억해주시기 바랍니다.
@@ -21,10 +21,6 @@ https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplot
 * 먼저 반드시 마크다운셀과 코드셀은 서로 번갈아가면서 등장해야 합니다.
 * 마크다운셀의 경우, 첫째줄에는 "반드시" 제목을, 바로 다음 줄에 "반드시" 관련 링크(e.g. 공식문서)를 첨부해야 합니다.
 * 그리고 한 줄 뛰운 다음 설명을 작성합니다.
-
-![markdown-cell](markdown-cell.png)
-
-* 위에 등장하는 표 이미지는 코드셀의 실행 결과(`matplotlib`)입니다.
 
 ## 3. 코드셀 작성하기
 

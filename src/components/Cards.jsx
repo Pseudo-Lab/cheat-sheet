@@ -2,7 +2,7 @@
   * Responsive Masonry : https://www.npmjs.com/package/react-responsive-masonry
   * 
 */
-import { BASE_URL, columnsCountBreakPoints, BASE_NAME } from '../config.json';
+import { URL, columnsCountBreakPoints, BASE_URL } from '../config.json';
 import { useEffect, useState } from 'react';
 import { IpynbParser } from './utils';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
@@ -19,8 +19,8 @@ function Cards() {
     useEffect(() => {
         (async () => {
             const baseUrl = (window.location.href
-                .startsWith(BASE_URL) ?
-                BASE_NAME : "");
+                .startsWith(URL) ?
+                BASE_URL : "");
 
             const ipy_objs = await ipynbParser
                 .parse(`${baseUrl}/assets/${src || "matplotlib"}.ipynb`);

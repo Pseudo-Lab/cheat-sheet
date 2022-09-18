@@ -31,6 +31,7 @@ yarn-error.log*
 
 # Caches
 .parcel-cache
+__pycache__
 
 # swp
 *.swp
