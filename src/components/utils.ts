@@ -112,7 +112,7 @@ class IpynbParser {
 
         this.tempIpynbBlock.api = cell.source.shift() as string;
         this.tempIpynbBlock.body = this.mdparser
-            .render(cell.source.join("\n"));
+            .render(cell.source.join(""));
     }
 
 
