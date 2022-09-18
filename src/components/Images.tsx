@@ -8,11 +8,9 @@ import React from "react";
 // />
 
 export default function Images(props: { images: string[] }) {
-    return (<p>{
-        props.images.map((image: string, i: number) => (<img
-            src={image}
-            key={`${i}`}
-            className="codeOutputImg"
-            alt="Image Output" />))
-    }</p>);
+    return (<>{props.images.map((image: string, i: number) => (
+        <p className="codeOutputImg">
+            <img src={image} key={`${i}`} alt="Image Output" />
+        </p>)
+    )}</>);
 }

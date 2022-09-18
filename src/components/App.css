@@ -85,3 +85,10 @@ td:first-child{
     /* border-right: 1px solid grey; */
     text-align:  center !important;
 }
+
+
+p.codeOutputImg{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
