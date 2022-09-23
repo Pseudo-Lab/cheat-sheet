@@ -14,10 +14,25 @@
     --light-blue-color: #3E3EFF;
     --blue-green-color: #0CA1BF;
     --green-color: #028102;
+
+    /* COLORS  */
+    --main-color: #929FED;
+    --lighter-color: #BEC6F4;
+    --darker-color: #808EDA;
+    --more-darker-color: #6070BA;
+    --complementary-color: #FFC5D0;
+
 }
+
+
 
 code {
     font-family: D2Coding;
+}
+
+p>code {
+    /* color: var(--main-color); */
+    font-weight: bold;
 }
 
 pre {
@@ -32,22 +47,36 @@ pre.hljs-python {
 pre.hljs-bash {
     font-size: 10pt;
     /* color:#ee00ba; */
-    color: var(--blue-green-color);
+    color: var(--more-darker-color);
     font-weight: bold;
 }
 
+
 .hljs-keyword {
-    color: var(--purple-color);
+    color: var(--more-darker-color);
+}
+
+.hljs-comment {
+    color: var(--main-color);
+    font-weight: normal;
+}
+
+.hljs-keyword {
     font-style: italic;
 }
 
-.hljs-number {
-    color: var(--light-blue-color);
+.hljs-number,
+.hljs-string,
+.hljs-literal {
+    color: var(--purple-color);
 }
 
-.hljs-string {
-    color: var(--blue-green-color);
+
+.hljs-title,
+.hljs-built_in {
+    color: #000000DE;
 }
+
 
 div.MuiPaper-root {
     margin: 20px;
@@ -56,6 +85,12 @@ div.MuiPaper-root {
 div#root {
     margin: 20px;
 }
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
 
 
 table {
@@ -77,17 +112,19 @@ table>thead>tr>* {
     text-align: center;
     background-color: rgb(245, 245, 245);
 }
-th{
+
+th {
     padding-left: 15px;
     padding-right: 15px;
 }
-td:first-child{
+
+td:first-child {
     /* border-right: 1px solid grey; */
-    text-align:  center !important;
+    text-align: center !important;
 }
 
 
-p.codeOutputImg{
+p.codeOutputImg {
     /* text-align: center; */
     padding: 0;
     margin: 0;
